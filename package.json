@@ -1,0 +1,15 @@
+{
+  "name": "finlex-cli",
+  "version": "0.0.1",
+  "bin" : { "finlex" : "./index.js" },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "henri@kelmu.org",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
