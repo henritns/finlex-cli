@@ -1,6 +1,6 @@
 # Finlex CLI
 
-Command line utility for tracking legislation.
+Command line utility for tracking legislation. The command `finlex changes` initiates a comparison of _statute numbers_ (e.g. 134/2016) between numbers in a local file and numbers in the statute versions data obtained from the [Semantic Finlex](http://data.finlex.fi/en/main).
 
 ## Installation
 
