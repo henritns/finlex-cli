@@ -35,8 +35,8 @@ Statute or e.g. topic name;;;
 ;20160601;https://data.finlex.fi/eli/sd/2003/728/.html; This is a whole statute
 ```
 
-Reviews thereafter are initiated with `finlex changes example-current.csv`.
+Reviews thereafter are initiated with `finlex changes <file>`.
 
 Color highlighting for CSV is recommended. I guess this could work with a graphical editor such as Excel, too, but I haven't tried it.
 
-Collaborative work on the file is possible through a versioning system such as Git, for example.
+Collaborative work on the file is possible through Git, for example.
