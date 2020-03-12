@@ -43,7 +43,7 @@ Collaborative work on the file is possible through Git, for example.
 
 ## Construcing the list
 
-The URLs on the list must point to a statute or section page in the [Semantic Finlex](http://data.finlex.fi/fi/main). The easiest way to collect such pages while browsing [current laws at Finlex](https://www.finlex.fi/fi/laki/ajantasa/) using the [Finlex Ex](https://github.com/henritns/finlex-ex) browser extension.
+The URLs on the list must point to a statute or section page in the [Semantic Finlex](http://data.finlex.fi/fi/main). The easiest way to collect such pages while browsing [current laws at Finlex](https://www.finlex.fi/fi/laki/ajantasa/) is using the [Finlex Ex](https://github.com/henritns/finlex-ex) browser extension.
 
 ## Issues
 
