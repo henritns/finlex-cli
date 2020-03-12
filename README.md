@@ -1,6 +1,6 @@
 # Finlex CLI
 
-Command line utility for tracking legislation.
+Command line utility for tracking Finnish legislation.
 
 ## Installation
 
