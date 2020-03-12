@@ -42,11 +42,13 @@ async function changes(args) {
         if (versions.length) {
           versions.sort().reverse()
           if (versions[0] > comparison) {
-            rows[i] = `CHANGES;${versions[0]};${cells[2]}`
-          } 
+            lastCells = cells.slice(3).join(";")
+            rows[i] = `CHANGES;${versions[0]};${cells[2]};${lastCells}`
+          }
         }
       }
     }
+
     data = rows.join("\n")
     fs.writeFileSync(process.argv[3], data)
     console.log(`Wrote to ${process.argv[3]}`)
