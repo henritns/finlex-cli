@@ -40,3 +40,11 @@ Reviews thereafter are initiated with `finlex changes <file>`.
 Color highlighting for CSV is recommended. I guess this could work with a graphical editor such as Excel, too, but I haven't tried it.
 
 Collaborative work on the file is possible through Git, for example.
+
+## Construcing the list
+
+The URLs on the list must point to a statute or section page in the [Semantic Finlex](http://data.finlex.fi/fi/main). The easiest way to collect such pages while browsing [current laws at Finlex](https://www.finlex.fi/fi/laki/ajantasa/) using the [Finlex Ex](https://github.com/henritns/finlex-ex) browser extension.
+
+## Issues
+
+Unfortunately, the Semantic Finlex is not updated nearly as frequently as Finlex. Therefore, you should treat this application as more of a proof-of concept rather than a reliable tool.
