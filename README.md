@@ -1,31 +1,42 @@
 # Finlex CLI
 
-Command line utility for tracking legislation. The command `finlex changes` initiates a comparison of _statute numbers_ (e.g. 134/2016) between numbers in a local file and numbers in the statute versions data obtained from the [Semantic Finlex](http://data.finlex.fi/en/main).
+Command line utility for tracking legislation.
 
 ## Installation
 
-Global installation `-g` recommended. The utility can then be accessed globally with command `finlex`.
+This is a yet unpublished Node package. Global installation (e.g. with npm's `-g`) is recommended. The utility can then be accessed globally with the command `finlex`.
 
 ## Use
 
 Example file initially:
 
 ```
-Kirjanpitoaineiston säilyttäminen;;
-;;https://data.finlex.fi/eli/sd/1997/1336/luku/2/pykala/9.html
-;;https://data.finlex.fi/eli/sd/1997/1336/luku/2/pykala/10.html
+Statute or e.g. topic name;;;
+;;https://data.finlex.fi/eli/sd/1997/1336/luku/2/pykala/9.html;This is a section
+;;https://data.finlex.fi/eli/sd/1997/1336/luku/2/pykala/10.html;
+;;https://data.finlex.fi/eli/sd/2003/728/.html; Note this is a whole statute
 ```
-After `finlex changes example-current.csv from 2000`:
+
+After `finlex changes examples/initial.csv from 2000` we can view sections or whole statutes that have changed starting from statute 1/2000, preserving any comments and/or additional columns you might have had there:
+
 ```
-Kirjanpitoaineiston säilyttäminen;
-CHANGES;20160101;https://data.finlex.fi/eli/sd/1997/1336/luku/2/pykala/9.html
-CHANGES;20160101;https://data.finlex.fi/eli/sd/1997/1336/luku/2/pykala/10.html
+Statute or e.g. topic name;;;
+CHANGES;20160101;https://data.finlex.fi/eli/sd/1997/1336/luku/2/pykala/9.html; This is a section
+CHANGES;20160101;https://data.finlex.fi/eli/sd/1997/1336/luku/2/pykala/10.html;
+CHANGES;20160601;https://data.finlex.fi/eli/sd/2003/728/.html; This is a whole statute
 ```
-And after manual review:
+
+And after manually reviewing the changes, we save the following CSV file:
+
 ```
-Kirjanpitoaineiston säilyttäminen;
- ;20160101;https://data.finlex.fi/eli/sd/1997/1336/luku/2/pykala/9.html
- ;20160101;https://data.finlex.fi/eli/sd/1997/1336/luku/2/pykala/10.html
- ```
- 
- Reviews thereafter are initiated with `finlex changes example-current.csv`.
+Statute or e.g. topic name;;;
+;20160101;https://data.finlex.fi/eli/sd/1997/1336/luku/2/pykala/9.html; This is a section
+;20160101;https://data.finlex.fi/eli/sd/1997/1336/luku/2/pykala/10.html;
+;20160601;https://data.finlex.fi/eli/sd/2003/728/.html; This is a whole statute
+```
+
+Reviews thereafter are initiated with `finlex changes example-current.csv`.
+
+Color highlighting for CSV is recommended. I guess this could work with a graphical editor such as Excel, too, but I haven't tried it.
+
+Collaborative work on the file is possible through a versioning system such as Git, for example.
